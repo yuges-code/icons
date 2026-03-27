@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "export": "node scripts/export.ts"
+    "export": "node scripts/export.ts",
+    "export:file": "node scripts/export/file.ts",
+    "export:urls": "node scripts/export/urls.ts",
+    "export:svgs": "node scripts/export/svgs.ts"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
