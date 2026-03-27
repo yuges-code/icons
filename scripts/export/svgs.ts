@@ -49,13 +49,13 @@ if (!sets || !sets.length) {
 }
 
 fs.rmSync(
-    path.resolve(__dirname, '../../src/icons'),
+    path.resolve(__dirname, '../../icons'),
     {
         force: true,
         recursive: true,
     }
 );
-fs.mkdirSync(path.resolve(__dirname, '../../src/icons'), { recursive: true });
+fs.mkdirSync(path.resolve(__dirname, '../../icons'), { recursive: true });
 
 await sets.forEach(async(set: any) => {
     const property = set?.componentPropertyDefinitions?.Weight;
@@ -75,7 +75,7 @@ await sets.forEach(async(set: any) => {
             return;
         }
 
-        fs.mkdirSync(path.resolve(__dirname, `../../src/icons/${variant}`), { recursive: true });
+        fs.mkdirSync(path.resolve(__dirname, `../../icons/${variant}`), { recursive: true });
 
         const address = images?.[component.id];
 
@@ -91,6 +91,6 @@ await sets.forEach(async(set: any) => {
 
         const svg = await response.text();
 
-        fs.writeFileSync(path.resolve(__dirname, `../../src/icons/${variant}/${set.name}.svg`), svg);
+        fs.writeFileSync(path.resolve(__dirname, `../../icons/${variant}/${set.name}.svg`), svg);
     });
 });
