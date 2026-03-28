@@ -1,9 +1,36 @@
 {
-  "name": "icons",
-  "private": true,
+  "name": "@yuges/icons",
+  "description": "Icons Library for Web Apps.",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "license": "MIT",
+  "author": {
+    "name": "Georgy",
+    "nickname": "goshasafonov",
+    "email": "goshasafonov@yandex.ru",
+    "github": "https://github.com/goshasafonov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuges-code/icons.git"
+  },
+  "main": "./dist/icons.umd.cjs",
+  "module": "./dist/icons.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "icons"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/icons.js",
+      "require": "./dist/icons.umd.cjs"
+    },
+    "./icons/dynamic/*.svg": "./icons/dynamic/*.svg",
+    "./icons/regular/*.svg": "./icons/regular/*.svg"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -17,6 +44,7 @@
     "@types/node": "^25.5.0",
     "dotenv": "^17.3.1",
     "typescript": "~5.9.3",
-    "vite": "^8.0.0"
+    "vite": "^8.0.0",
+    "vite-plugin-dts": "^4.5.4"
   }
 }
