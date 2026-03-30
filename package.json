@@ -2,7 +2,7 @@
   "name": "@yuges/icons",
   "description": "Icons Library for Web Apps.",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -29,7 +29,9 @@
       "require": "./dist/icons.umd.cjs"
     },
     "./icons/dynamic/*.svg": "./icons/dynamic/*.svg",
-    "./icons/regular/*.svg": "./icons/regular/*.svg"
+    "./icons/regular/*.svg": "./icons/regular/*.svg",
+    "./dynamic/*.svg": "./icons/dynamic/*.svg",
+    "./regular/*.svg": "./icons/regular/*.svg"
   },
   "scripts": {
     "dev": "vite",
