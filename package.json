@@ -2,7 +2,7 @@
   "name": "@yuges/icons",
   "description": "Icons Library for Web Apps.",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -38,7 +38,8 @@
     "export": "node scripts/export.ts",
     "export:file": "node scripts/export/file.ts",
     "export:urls": "node scripts/export/urls.ts",
-    "export:svgs": "node scripts/export/svgs.ts"
+    "export:svgs": "node scripts/export/svgs.ts",
+    "export:types": "node scripts/export/types.ts"
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
