@@ -1,6 +1,6 @@
 import { Icon } from "./Icon";
 
-export const Icons = (<const>[
+export const Icons = ([
     {
         "name": {
             "kebab": "seal-check",
@@ -91,6 +91,6 @@ export const Icons = (<const>[
             "pascal": "Menu"
         }
     }
-]) satisfies readonly Icon[];
+]) as const satisfies readonly Icon[];
 
 export type Icons = (typeof Icons)[number];
